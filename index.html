@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Youth Public Health Leadership – Session 5</title>
+  <meta name="description" content="Week 3 · Messaging Activation – Distribution Review, Partner Outreach, and Campaign Design (26 May 2025)" />
+
+  <!-- ========= GLOBAL STYLES ========= -->
+  <style>
+    :root{
+      --primary-color:#4c6ef5;
+      --secondary-color:#40c057;
+      --accent-color:#fd7e14;
+      --dark-color:#343a40;
+      --light-color:#f8f9fa;
+      --text-color:#212529;
+      --shadow:0 4px 8px rgba(0,0,0,.1)
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Segoe UI',Tahoma,sans-serif;line-height:1.6;color:var(--text-color);background:#f1f3f5}
+    .container{max-width:1200px;margin:auto;padding:5px}
+    header{background:linear-gradient(135deg,var(--primary-color),#228be6);color:#fff;padding:2.5rem;text-align:center;border-radius:15px;margin-bottom:2rem;box-shadow:var(--shadow)}
+    header h1{font-size:2.2rem;margin-bottom:.5rem;font-weight:700}
+    header h2{font-size:1.3rem;font-weight:600;margin-bottom:.4rem;opacity:.95}
+    header p{font-size:1.05rem;margin-bottom:1rem;opacity:.9}
+    .date-box{display:inline-block;background:rgba(255,255,255,.2);padding:.5rem 1.2rem;border-radius:30px;font-weight:500;margin-top:.4rem}
+
+    /* CONTENT BLOCKS */
+    .intro-section,.activities-section{background:#fff;border-radius:15px;padding:2rem;margin-bottom:2rem;box-shadow:var(--shadow)}
+    .intro-message{text-align:center;max-width:800px;margin:0 auto 1.5rem;font-size:1.1rem;line-height:1.7}
+    .section-title{color:var(--primary-color);font-size:1.8rem;margin-bottom:1.5rem;text-align:center;position:relative;padding-bottom:.5rem}
+    .section-title::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:100px;height:3px;background:var(--primary-color)}
+
+    /* ACTIVITY GRID */
+    .activity-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-top:2rem}
+    .activity-card{background:var(--light-color);border-radius:10px;padding:1.5rem;box-shadow:0 2px 4px rgba(0,0,0,.05);transition:transform .3s;cursor:pointer;position:relative}
+    .activity-card:hover{transform:translateY(-5px)}
+    .activity-card h4{color:var(--primary-color);margin-bottom:1rem;font-size:1.1rem;display:flex;align-items:center;justify-content:space-between}
+    .activity-card h4 .time{font-size:.8rem;padding:.3rem .6rem;border-radius:20px;background:var(--accent-color);color:#fff;font-weight:400}
+    .activity-card ul{padding-left:1.2rem;margin-top:.5rem}
+    .activity-card li{margin-bottom:.5rem;color:#495057;font-size:.95rem}
+    .activity-card a{color:var(--primary-color);text-decoration:none}
+    .activity-card a:hover{text-decoration:underline}
+    .expand-icon{position:absolute;bottom:15px;right:15px;background:var(--primary-color);color:#fff;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:bold;transition:.3s}
+    .detailed-content{display:none;background:#fff;border-radius:10px;padding:1.5rem;margin-top:1rem;border-top:3px solid var(--primary-color)}
+    .detailed-content.active{display:block;animation:fade .5s}
+    
+    @keyframes fade{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}
+    
+    /* BOXES FOR KEY TERMS, DISCUSSION, ACTIVITIES, REFLECTION */
+    .definition-box{background:#e7f5ff;border-left:4px solid #4dabf7;padding:1rem;border-radius:5px;margin-bottom:1.5rem}
+    .discussion-box{background:#fff9db;border-left:4px solid #fcc419;padding:1rem;border-radius:5px;margin-bottom:1.5rem}
+    .activity-box{background:#f3f0ff;border-left:4px solid #7950f2;padding:1rem;border-radius:5px;margin-bottom:1.5rem}
+    .feedback-box{background:#ebfbee;border-left:4px solid #40c057;padding:1rem;border-radius:5px;margin-bottom:1.5rem}
+    
+    /* RESOURCE BUTTON */
+    .resource-button {
+      display: inline-block;
+      background-color: var(--secondary-color);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .resource-button:hover {
+      background-color: #37a24a;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      color: white;
+    }
+    
+    /* TABLE STYLES */
+    table {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+    }
+    th {
+      background-color: #e7f5ff;
+      font-weight: 600;
+      text-align: left;
+    }
+    td, th {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+    tr:nth-child(even) {
+      background-color: #f8f9fa;
+    }
+    
+    /* TEMPLATE BOXES */
+    .template-box {
+      background: #f8f9fa;
+      padding: 1rem;
+      border-radius: 5px;
+      margin: 1rem 0;
+    }
+    
+    
+    /* FOOTER */
+    .footer{text-align:center;padding:2rem;background:var(--dark-color);color:#fff;border-radius:15px;margin-top:2rem;font-size:.9rem}
+    @media(max-width:768px){.activity-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- ===== HEADER ===== -->
+    <header>
+      <h1>Public Health Leadership</h1>
+      <h2>Messaging Activation – Week 2</h2>
+      <p>Distribution review, partner outreach, and campaign design focusing on the food–stress–risk connection, mental health, and STI prevention.</p>
+      <div class="date-box">Week 3 - Monday, 26 May 2025</div>
+    </header>
+
+    <!-- Introduction -->
+    <section class="intro-section">
+      <div class="intro-message">
+        <p><strong>Session 5: Distribution Review & Partner Collaboration</strong><br>Teams review their school distribution efforts, identify and reach out to potential partners, and begin designing an awareness campaign that connects food insecurity, mental health stress, and STI risk. This session emphasizes building community connections and creating messaging that addresses the interconnected nature of youth health challenges.</p>
+        <div class="date-box">Week 3 - Monday 26 May 2025 | 90 mins</div>
+        <a href="https://sti-info-page.vercel.app/" target="_blank" class="resource-button">Access Vallejo Youth Health Resource Directory</a>
+      </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section class="activities-section">
+      <h2 class="section-title">Session Resources</h2>
+      <div class="activity-grid">
+        <!-- Distribution Tracking Tools -->
+        <div class="activity-card" onclick="toggleSection('res-tracking')">
+          <h4>Distribution Tracking Tools</h4>
+          <ul><li>Flyer inventory sheets</li><li>Location mapping template</li><li>Photo documentation guide</li></ul>
+          <div class="expand-icon">+</div>
+          <div id="res-tracking" class="detailed-content">
+            <div class="activity-box">
+              <h4>Flyer Distribution Tracking Sheet</h4>
+              <p><strong>Use this template to track your distribution efforts:</strong></p>
+              <p>Use this sheet to log every flyer/poster placement, date, and social‑media photo link.</p>
+              <a href="https://docs.google.com/spreadsheets/d/1o4y7ZCc0IogStnnlan8hgLXVXlHF7H9hg3uueY4gtt0/edit?usp=sharing" target="_blank" class="resource-button">Open Tracking Sheet ↗</a>
+            </div>
+          </div>
+        </div>
+      
+              
+
+        <!-- Partner Outreach Templates -->
+        <div class="activity-card" onclick="toggleSection('res-partner')">
+          <h4>Partner Outreach Templates</h4>
+          <ul><li>Email templates</li><li>Introduction scripts</li><li>Collaboration proposals</li></ul>
+          <div class="expand-icon">+</div>
+          <div id="res-partner" class="detailed-content">
+            <div class="activity-box">
+              <h4>Partner Outreach Resources</h4>
+              <p><strong>Access the complete partner outreach templates document:</strong></p>
+              <p style="margin: 1rem 0;">
+                <a href="https://docs.google.com/document/d/1--sga2e9Glsg_Fsj0RIvINkuzNcEpZY1/edit?usp=sharing&ouid=101799006520898988065&rtpof=true&sd=true" target="_blank" class="resource-button">Open Partner Outreach Templates</a>
+              </p>
+              <p>This document includes:</p>
+              <ul>
+                <li>Email templates for community partners</li>
+                <li>School staff introduction scripts</li>
+                <li>Collaboration proposal frameworks</li>
+                <li>Follow-up message templates</li>
+              </ul>
+              <p style="margin-top: 1rem;">Remember to customize all templates with your specific information and keep the messaging focused on the food-stress-risk connection and youth health resources.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Campaign Design Resources -->
+        <div class="activity-card" onclick="toggleSection('res-campaign')">
+          <h4>Campaign Design Resources</h4>
+          <ul><li>"Hunger = Stress = Risk" materials</li><li>Mental health messaging guides</li><li>STI awareness templates</li></ul>
+          <div class="expand-icon">+</div>
+          <div id="res-campaign" class="detailed-content">
+            <div class="activity-box">
+              <h4>"Hunger = Stress = Risk" Campaign Framework</h4>
+              <div style="background:#e7f5ff; padding:1rem; border-radius:5px; margin:1rem 0;">
+                <p><strong>Core Message:</strong></p>
+                <p style="font-size:1.1rem; font-weight:600; color:var(--primary-color);">"When basic needs aren't met, everything else becomes harder. Let's break the cycle together."</p>
+                
+                <p style="margin-top:1rem;"><strong>Key Statistics to Share:</strong></p>
+                <ul>
+                  <li>Teens experiencing food insecurity are 2x more likely to report anxiety and depression</li>
+                  <li>Chronic stress from hunger affects decision-making and increases risky behaviors</li>
+                  <li>Food-insecure youth are 1.5x more likely to engage in unprotected sex</li>
+                  <li>Free resources exist, but only 30% of eligible youth access them</li>
+                </ul>
+                
+                <p style="margin-top:1rem;"><strong>Campaign Pillars:</strong></p>
+                <ol>
+                  <li><strong>RECOGNIZE:</strong> The connections between hunger, stress, and health risks</li>
+                  <li><strong>REDUCE:</strong> Stigma around seeking help for any of these issues</li>
+                  <li><strong>RESOURCE:</strong> Connect peers to free, confidential services</li>
+                </ol>
+              </div>
+              
+              <h4 style="margin-top:2rem;">Youth-Friendly Mental Health Messaging</h4>
+              <div style="background:#fff9db; padding:1rem; border-radius:5px; margin:1rem 0;">
+                <p><strong>Do Say:</strong></p>
+                <ul>
+                  <li>"It's okay to not be okay"</li>
+                  <li>"Your feelings are valid"</li>
+                  <li>"Help is available, no questions asked"</li>
+                  <li>"You deserve support"</li>
+                  <li>"Mental health is health"</li>
+                </ul>
+                
+                <p style="margin-top:1rem;"><strong>Don't Say:</strong></p>
+                <ul>
+                  <li>❌ "Just think positive"</li>
+                  <li>❌ "Others have it worse"</li>
+                  <li>❌ "You're being dramatic"</li>
+                  <li>❌ "Snap out of it"</li>
+                  <li>❌ Clinical terms without explanation</li>
+                </ul>
+                
+                <p style="margin-top:1rem;"><strong>Sample Social Media Posts:</strong></p>
+                <div style="background:white; padding:0.5rem; margin:0.5rem 0; border-radius:3px;">
+                  <p>🧠 Stressed about money for food? It affects more than your stomach. When we're worried about basic needs, our mental health suffers too. You're not alone. [Link to resources] #MentalHealthMatters #FoodSecurity</p>
+                </div>
+                <div style="background:white; padding:0.5rem; margin:0.5rem 0; border-radius:3px;">
+                  <p>💚 Reminder: Asking for help is brave, not weak. Whether it's food, mental health support, or health services - you deserve care. Check out free resources in Vallejo: [QR code] #YouthHealth #BreakTheStigma</p>
+                </div>
+              </div>
+              
+              <h4 style="margin-top:2rem;">STI Prevention Messaging Guide</h4>
+              <div style="background:#ebfbee; padding:1rem; border-radius:5px; margin:1rem 0;">
+                <p><strong>Key Messages:</strong></p>
+                <ul>
+                  <li>"Your health, your choice, your privacy" - Emphasize confidentiality for teens 12+</li>
+                  <li>"Free testing, no judgment" - Remove financial and social barriers</li>
+                  <li>"Knowledge is power" - Focus on empowerment, not fear</li>
+                  <li>"Stress affects decisions" - Connect to broader health picture</li>
+                </ul>
+                
+                <p style="margin-top:1rem;"><strong>Conversation Starters:</strong></p>
+                <ul>
+                  <li>"Did you know you can get tested for free without parent permission if you're 12+?"</li>
+                  <li>"Stress from life stuff can affect our health choices - let's talk about resources"</li>
+                  <li>"Taking care of your sexual health is just as important as other health checkups"</li>
+                </ul>
+                
+                <p style="margin-top:1rem;"><strong>Visual Concepts:</strong></p>
+                <ul>
+                  <li>🎯 Infographic: "3 Steps to Free, Confidential Testing"</li>
+                  <li>📱 QR code cards: "Scan for Nearest Testing Location"</li>
+                  <li>🤝 Peer testimonials: "Why I Got Tested" (anonymous)</li>
+                  <li>📍 Map visual: "5 Free Testing Sites Near You"</li>
+                </ul>
+                
+                <p style="margin-top:1rem;"><strong>Important Reminders:</strong></p>
+                <ul>
+                  <li>Always include that services are FREE and CONFIDENTIAL</li>
+                  <li>Provide specific locations and hours</li>
+                  <li>Include multiple ways to access (walk-in, appointment, hotline)</li>
+                  <li>Show that staff are youth-friendly and non-judgmental</li>
+                </ul>
+              </div>
+              
+              <div style="text-align:center; margin-top:2rem;">
+                <a href="https://sti-info-page.vercel.app/" target="_blank" class="resource-button">Access Full Vallejo Youth Health Resource Directory</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Activities Section -->
+    <section class="activities-section">
+      <h2 class="section-title">Session Activities</h2>
+      <p style="text-align:center;margin-bottom:20px;color:#495057;">Click on an activity to see details (Key Terms, Discussion Points, Activity, Reflection).</p>
+      
+      <div class="activity-grid">
+        <!-- Activity 1: School Distribution Review -->
+        <div class="activity-card" onclick="toggleSection('act-distribution-review')">
+          <h4>School Distribution Flyer Review 
+            <span class="time">25 mins</span>
+          </h4>
+          <ul>
+            <li>Audit current distribution</li>
+            <li>Identify gaps and successes</li>
+            <li>Document with photos</li>
+          </ul>
+          <div class="expand-icon">+</div>
+          
+          <div id="act-distribution-review" class="detailed-content">
+            <!-- Key Terms -->
+            <div class="definition-box">
+              <h4>Key Terms</h4>
+              <p><strong>Distribution audit:</strong> Systematic review of where materials have been placed and their current status.</p>
+              <p><strong>Coverage gaps:</strong> Areas or populations that haven't received materials as planned.</p>
+              <p><strong>High-traffic zones:</strong> School locations with maximum student visibility and engagement.</p>
+            </div>
+
+            <!-- Discussion Points -->
+            <div class="discussion-box">
+              <h4>Discussion Points</h4>
+              <ul>
+                <li>Which locations have been most effective for flyer visibility?</li>
+                <li>What feedback have you received from peers about the materials?</li>
+                <li>How can we ensure materials reach diverse student groups?</li>
+                <li>What challenges have you faced in distribution?</li>
+              </ul>
+            </div>
+
+            <!-- Activity -->
+            <div class="activity-box">
+              <h4>Activity</h4>
+              <p><strong>Part 1 (10 mins):</strong> Individual review and documentation:</p>
+              <ul>
+                <li>Complete the distribution tracking sheet for your assigned areas</li>
+                <li>Take photos of current flyer placements</li>
+                <li>Note which locations need replenishment</li>
+                <li>Record any damaged or removed materials</li>
+              </ul>
+              
+              <p><strong>Part 2 (10 mins):</strong> Team sharing and gap analysis:</p>
+              <ul>
+                <li>Share findings with your team</li>
+                <li>Identify patterns in successful vs. unsuccessful placements</li>
+                <li>Map underserved areas or student populations</li>
+                <li>Create action plan for next distribution round</li>
+              </ul>
+              
+              <p><strong>Part 3 (5 mins):</strong> Full group debrief on best practices discovered.</p>
+            </div>
+
+            <!-- Reflection Questions -->
+            <div class="feedback-box">
+              <h4>Reflection Questions</h4>
+              <ul>
+                <li>What surprised you about where materials were most/least effective?</li>
+                <li>How can we better reach students who might be hesitant to pick up health information?</li>
+                <li>What adjustments should we make for the next distribution phase?</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Activity 2: Partner Identification and Outreach -->
+        <div class="activity-card" onclick="toggleSection('act-partner-outreach')">
+          <h4>Partner Identification & Outreach 
+            <span class="time">30 mins</span>
+          </h4>
+          <ul>
+            <li>Brainstorm potential partners</li>
+            <li>Write personalized outreach</li>
+            <li>Develop collaboration ideas</li>
+          </ul>
+          <div class="expand-icon">+</div>
+
+          <div id="act-partner-outreach" class="detailed-content">
+            <!-- Key Terms -->
+            <div class="definition-box">
+              <h4>Key Terms</h4>
+              <p><strong>Community partners:</strong> Organizations or individuals outside school who share our health advocacy goals.</p>
+              <p><strong>School allies:</strong> Staff members who can amplify our message (wellness centers, counselors, food services).</p>
+              <p><strong>Value proposition:</strong> Clear statement of mutual benefit from collaboration.</p>
+              <p><strong>Champion:</strong> An influential person who actively supports and promotes your cause.</p>
+            </div>
+
+            <!-- Discussion Points -->
+            <div class="discussion-box">
+              <h4>Discussion Points</h4>
+              <ul>
+                <li>Who in your community already cares about youth health issues?</li>
+                <li>Which school staff members have shown interest in student wellness?</li>
+                <li>What organizations address food insecurity, mental health, or STI prevention locally?</li>
+                <li>How can partnerships strengthen our campaign's reach and credibility?</li>
+              </ul>
+            </div>
+
+            <!-- Activity -->
+            <div class="activity-box">
+              <h4>Activity</h4>
+              <div style="background:#ffe3e3; padding:1rem; border-radius:5px; margin-bottom:1rem;">
+                <p><strong>⚠️ REQUIRED OUTREACH - Solano County Fair Opportunity:</strong></p>
+                <p>The Solano County Fair (June 12-15, 2025) is accepting youth vendor applications! This 4-day event at the Solano County Fairgrounds in Vallejo has created "The Village" - a new vendor area perfect for health education booths. Family Ag Day (Thursday) emphasizes health education with maximum community reach.</p>
+                <p><strong>Each site lead MUST email: entries@scfair.org or call 707-551-2002 to request a table for Health Amplified.</strong></p>
+              </div>
+              
+              <p><strong>Part 1 (10 mins):</strong> Individual brainstorming:</p>
+              <ul>
+                <li>List at least 4 potential partners (2 organizations, 2 individuals)</li>
+                <li>Consider:
+                  <ul>
+                    <li>School wellness center staff</li>
+                    <li>Food service coordinators</li>
+                    <li>Local mental health organizations</li>
+                    <li>Community health clinics</li>
+                    <li>Youth-serving nonprofits</li>
+                    <li>Trusted teachers or counselors</li>
+                  </ul>
+                </li>
+                <li>Note why each would care about our mission</li>
+              </ul>
+              
+              <p><strong>Part 2 (15 mins):</strong> Write two outreach messages:</p>
+              <ul>
+                <li>Select your top 2 potential partners</li>
+                <li>Draft personalized outreach for each using the template</li>
+                <li>Include:
+                  <ul>
+                    <li>Brief introduction of Health Amplified</li>
+                    <li>Connection to their mission/interests</li>
+                    <li>Specific collaboration idea</li>
+                    <li>Clear next steps</li>
+                  </ul>
+                </li>
+              </ul>
+              
+              <p><strong>Part 3 (5 mins):</strong> Peer review - exchange drafts for feedback.</p>
+            </div>
+
+            <!-- Reflection Questions -->
+            <div class="feedback-box">
+              <h4>Reflection Questions</h4>
+              <ul>
+                <li>Which potential partner excites you most and why?</li>
+                <li>How can partnerships help address the food-stress-risk connection?</li>
+                <li>What concerns might partners have, and how can we address them?</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Activity 3: Campaign Design Workshop -->
+        <div class="activity-card" onclick="toggleSection('act-campaign-design')">
+          <h4>"Hunger = Stress = Risk" Campaign Design 
+            <span class="time">35 mins</span>
+          </h4>
+          <ul>
+            <li>Develop campaign messaging</li>
+            <li>Focus on mental health & STIs</li>
+            <li>Create action plan</li>
+          </ul>
+          <div class="expand-icon">+</div>
+
+          <div id="act-campaign-design" class="detailed-content">
+            <!-- Key Terms -->
+            <div class="definition-box">
+              <h4>Key Terms</h4>
+              <p><strong>Syndemic:</strong> When multiple health issues interact and reinforce each other (food insecurity + stress + STI risk).</p>
+              <p><strong>Awareness campaign:</strong> Coordinated efforts to educate and change attitudes about health issues.</p>
+              <p><strong>Peer messaging:</strong> Health information delivered by and for young people in relatable language.</p>
+              <p><strong>Call to action:</strong> Clear steps people can take after learning about an issue.</p>
+            </div>
+
+            <!-- Discussion Points -->
+            <div class="discussion-box">
+              <h4>Discussion Points</h4>
+              <ul>
+                <li>How does hunger increase stress and risky behaviors among youth?</li>
+                <li>Why is it important to address these issues together rather than separately?</li>
+                <li>What makes mental health and STI topics particularly challenging to discuss?</li>
+                <li>How can we make these connections clear without overwhelming people?</li>
+              </ul>
+            </div>
+
+            <!-- Activity -->
+            <div class="activity-box">
+              <h4>Activity</h4>
+              <p><strong>Part 1 (10 mins):</strong> Understanding the connections:</p>
+              <ul>
+                <li>Review the "Hunger = Stress = Risk" concept from program materials</li>
+                <li>Discuss how food insecurity leads to:
+                  <ul>
+                    <li>Increased mental health challenges (anxiety, depression)</li>
+                    <li>Higher stress levels affecting decision-making</li>
+                    <li>Greater vulnerability to risky behaviors including unprotected sex</li>
+                  </ul>
+                </li>
+                <li>Brainstorm real examples from Vallejo youth experiences</li>
+              </ul>
+              
+              <p><strong>Part 2 (20 mins):</strong> Campaign development:</p>
+              <ul>
+                <li>Choose a specific focus within the food-stress-risk connection</li>
+                <li>Develop campaign elements:
+                  <ul>
+                    <li>Core message (1-2 sentences)</li>
+                    <li>3 key facts to share</li>
+                    <li>Visual concepts (poster ideas, social media)</li>
+                    <li>Peer-to-peer talking points</li>
+                    <li>Resources to promote (use the Vallejo Youth Health Directory)</li>
+                    <li>Specific mental health and STI services to highlight</li>
+                  </ul>
+                </li>
+                <li>Plan one awareness activity (lunch table, assembly, social media push)</li>
+              </ul>
+              
+              <p><strong>Part 3 (5 mins):</strong> Quick pitch - each team shares their campaign concept.</p>
+            </div>
+
+            <!-- Reflection Questions -->
+            <div class="feedback-box">
+              <h4>Reflection Questions</h4>
+              <ul>
+                <li>How does connecting these issues change how we approach health education?</li>
+                <li>What resistance might we face, and how can we address it sensitively?</li>
+                <li>How will your campaign reduce stigma around mental health and STI testing?</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Assignment -->
+    <section class="activities-section">
+      <h2 class="section-title">Session Assignment</h2>
+      <p style="text-align:center;margin-bottom:20px;color:#495057;">Complete these tasks to prepare for implementing your campaign.</p>
+      <div class="activity-grid">
+        <div class="activity-card" style="cursor:auto;">
+          <h4>Partner Outreach & Campaign Planning<span class="time">Due Wed 28 May</span></h4>
+          <ul><li>Send partner outreach emails</li><li>REQUIRED: Fair vendor application</li><li>Finalize campaign materials</li></ul>
+          <div class="expand-icon" style="pointer-events: none;">&nbsp;</div>
+          <div class="detailed-content" style="display: block;">
+            <p><strong>Instructions:</strong> Complete the following before Session 6 (Thursday, May 29):</p>
+            
+            <div style="background:#ffe3e3; padding:1rem; border-radius:5px; margin-bottom:1rem;">
+              <p><strong>🔴 MANDATORY - Solano County Fair Vendor Application:</strong></p>
+              <p><strong>Each site lead MUST send an email by Tuesday evening to:</strong></p>
+              <ul>
+                <li>Email: entries@scfair.org</li>
+                <li>Phone (backup): 707-551-2002</li>
+                <li>Subject Line: "Youth Health Education Booth Request - Health Amplified"</li>
+                <li>Request: Table space in "The Village" vendor area for June 12-15, 2025</li>
+                <li>Mention: We're a youth-led health initiative wanting to share resources on Family Ag Day</li>
+              </ul>
+              <p><strong>CC your program coordinator (javier@clubstride.org) on this email.</strong></p>
+            </div>
+            
+            <ol>
+              <li><strong>Partner Outreach (by Tuesday evening):</strong>
+                <ul>
+                  <li>Send your two outreach messages to potential partners</li>
+                  <li>Follow up with any school staff identified</li>
+                  <li>Document responses in your tracking sheet</li>
+                </ul>
+              </li>
+              <li><strong>Campaign Development:</strong>
+                <ul>
+                  <li>Create at least one visual mock-up for your campaign</li>
+                  <li>Write 5 social media posts addressing the food-stress-risk connection</li>
+                  <li>Develop a 1-page fact sheet focusing on mental health and STI resources</li>
+                </ul>
+              </li>
+              <li><strong>Resource Integration:</strong>
+                <ul>
+                  <li>Review the <a href="https://sti-info-page.vercel.app/" target="_blank">Vallejo Youth Health Resource Directory</a></li>
+                  <li>Select 3 specific resources to highlight in your campaign</li>
+                  <li>Create QR codes linking to these resources</li>
+                </ul>
+              </li>
+            </ol>
+            <p style="margin-top: 15px;">Submit all materials to Google Classroom and bring printed copies to Session 6 (Thursday, May 29) for team review.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <p>© 2025 Health Amplified · Youth Public Health Action &amp; Collaborative Systems Lab</p>
+      <p>Contact: javier@clubstride.org | (707) 204-3160</p>
+    </footer>
+  </div>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script>
+    function toggleSection(id){
+      const el = document.getElementById(id);
+      if(!el) return;
+      el.classList.toggle('active');
+      const card = el.closest('.activity-card');
+      if(card){
+        const expanded = el.classList.contains('active');
+        card.setAttribute('aria-expanded', expanded);
+        const icon = card.querySelector('.expand-icon');
+        if(icon) icon.textContent = expanded ? '–' : '+';
+      }
+    }
+  </script>
+</body>
+</html>
